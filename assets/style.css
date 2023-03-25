@@ -1,0 +1,78 @@
+#mfig .mfig__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+#mfig input {
+  display: none;
+}
+
+#mfig .mfig__choices-container label input:checked + img,
+#mfig .mfig__choices-container label:hover img {
+  box-shadow: 0 0 3px #333;
+}
+
+#mfig .mfig__choices-container label {
+  flex-basis: calc(100% / 4);
+  aspect-ratio: 3 / 2;
+  padding: 4px;
+  margin: 0;
+}
+
+#mfig .mfig__choices-container img {
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#mfig .mfig__choices-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0 -4px; */
+}
+
+#mfig .mfig__step-period .mfig__choice span {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  transition: 0.1s;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#mfig .mfig__step-period .mfig__choice span:hover,
+#mfig .mfig__step-period .mfig__choice input:checked + span {
+  background-color: #348ccb;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+#mfig ul{
+	margin-left: 0;
+}
+
+#mfig li{
+	display: flex;
+	justify-content: space-between
+}
+
+#mfig .mfig__period span{
+	color: red;
+}
+
+@media screen and (max-width: 849px) {
+  #mfig .mfig__choices-container label {
+    flex-basis: calc(100% / 3);
+  }
+}
